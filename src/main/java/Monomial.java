@@ -1,20 +1,42 @@
-public class Monomial {
-    private int grad;
-    private int coef;
+public class Monomial implements Comparable<Monomial>{
+    private double coef;
+    private int putere;
 
-    public int getGrad() {
-        return grad;
+
+    public Monomial (double coef, int putere ){
+        this.coef = coef;
+        this.putere = putere;
+
+    }
+    public int getPutere() {
+        return putere;
     }
 
-    public void setGrad(int grad) {
-        this.grad = grad;
+    public void setPutere(int putere) {
+        this.putere = putere;
     }
 
-    public int getCoef() {
+    public double getCoef() {
         return coef;
     }
 
     public void setCoef(int coef) {
         this.coef = coef;
+    }
+
+    public void printString(){
+        // afisarea unui monom pentru a afisa un polinom
+    }
+
+    @Override
+    public int compareTo(Monomial o) {
+        if(this.putere == o.putere){
+            return 0;
+        }else{
+            if(this.putere > o.putere){
+                return 1;
+            }
+            else return -1;
+        }
     }
 }
