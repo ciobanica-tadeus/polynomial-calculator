@@ -3,40 +3,37 @@ import java.util.Collections;
 import java.util.Map;
 
 public class Model {
+    private Polynomial firstPolynomial;
+    private Polynomial secondPolynomial;
+    private Polynomial resultPolynomial;
 
-    //adunarea a doua polinoame
-    public Polynomial addPolynoms(Polynomial first, Polynomial second) {
-        Polynomial result = new Polynomial();
+    public Model() {
 
-        for (Monomial aux : first.getMonomialArrayList()) {
-            result.getMonomialHashMap().put(aux.getPutere(), aux.getCoef());
-        }
-        for (Monomial aux : second.getMonomialArrayList()) {
-            if(result.getMonomialHashMap().containsKey(aux.getPutere())){
-                result.getMonomialHashMap().put(aux.getPutere(), aux.getCoef() + result.getMonomialHashMap().get(aux.getPutere()));
-            }
-            else{
-                result.getMonomialHashMap().put(aux.getPutere(), aux.getCoef());
-            }
-        }
-        return result.getPolynomial();
     }
 
-    //scaderea a doua polinoame
-    public Polynomial substractPolynoms(Polynomial first, Polynomial second) {
-        Polynomial result = new Polynomial();
-
-        for (Monomial aux : first.getMonomialArrayList()) {
-            result.getMonomialHashMap().put(aux.getPutere(), aux.getCoef());
-        }
-        for (Monomial aux : second.getMonomialArrayList()) {
-            if(result.getMonomialHashMap().containsKey(aux.getPutere())){
-                result.getMonomialHashMap().put(aux.getPutere(), result.getMonomialHashMap().get(aux.getPutere()) - aux.getCoef());
-            }
-            else{
-                result.getMonomialHashMap().put(aux.getPutere(), aux.getCoef());
-            }
-        }
-        return result.getPolynomial();
+    public Polynomial getFirstPolynomial() {
+        return firstPolynomial;
     }
+
+    public void setFirstPolynomial(Polynomial firstPolynomial) {
+        this.firstPolynomial = firstPolynomial;
+    }
+
+    public Polynomial getSecondPolynomial() {
+        return secondPolynomial;
+    }
+
+    public void setSecondPolynomial(Polynomial secondPolynomial) {
+        this.secondPolynomial = secondPolynomial;
+    }
+
+    public Polynomial getResultPolynomial() {
+        return resultPolynomial;
+    }
+
+    public void setResultPolynomial(Polynomial resultPolynomial) {
+        this.resultPolynomial = resultPolynomial;
+    }
+
+
 }

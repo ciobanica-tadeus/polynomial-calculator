@@ -2,8 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
-public class View {
-    private JFrame frame = new JFrame("View");
+public class View extends JFrame{
+    //private JFrame frame = new JFrame("View");
+
     private JLabel mainLabel = new JLabel("Calculator Polinomial");
     private JLabel firstPolynom = new JLabel("Primul polinom  = ");
     private JLabel secondPolynom = new JLabel("Al doilea polinom  = ");
@@ -18,6 +19,18 @@ public class View {
     private JLabel resultPolynom = new JLabel("Rezultatul   = ");
     private JTextField resultTextField = new JTextField();
     private JPanel contentPane = new JPanel();
+
+    public JTextField getFirstTextField() {
+        return firstTextField;
+    }
+
+    public JTextField getSecondTextField() {
+        return secondTextField;
+    }
+
+    public void setResultTextField(String resultString) {
+        this.resultTextField.setText(resultString);
+    }
 
     public View (){
         mainLabel.setBounds(160,8,200,30);
@@ -34,6 +47,7 @@ public class View {
         derivateBtn.setBounds(20,260,150,30);
         integrateBtn.setBounds(180,260,150,30);
 
+        resultTextField.setEditable(false);
         contentPane.add(mainLabel);
         contentPane.add(firstPolynom);
         contentPane.add(secondPolynom);
@@ -49,18 +63,10 @@ public class View {
         contentPane.add(resultTextField);
         contentPane.setBackground(Color.CYAN);
         contentPane.setLayout(null);
-        frame.setSize(400,380);
-        frame.setContentPane(contentPane);
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-    }
-
-    public String getPolynomial1(){
-        return firstTextField.getText();
-    }
-
-    public String getPolynomial2(){
-        return secondTextField.getText();
+        this.setSize(400,380);
+        this.setContentPane(contentPane);
+        this.setTitle("Calculator Polinoame");
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
     public void addAddListener (ActionListener actionListener){
