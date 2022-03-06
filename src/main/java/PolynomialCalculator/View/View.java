@@ -1,9 +1,10 @@
+package PolynomialCalculator.View;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class View extends JFrame{
-    //private JFrame frame = new JFrame("View");
 
     private JLabel mainLabel = new JLabel("Calculator Polinomial");
     private JLabel firstPolynom = new JLabel("Primul polinom  = ");
@@ -68,12 +69,15 @@ public class View extends JFrame{
         this.setTitle("Calculator Polinoame");
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
-
+    public void printMessageError(){JOptionPane.showMessageDialog(this,"Introduceti polinoame valide!");}
     public void addAddListener (ActionListener actionListener){
         addBtn.addActionListener(actionListener);
     }
-
-    public static void main(String[] args) {
-        View view = new View();
+    public void addSubstractListener(ActionListener actionListener){
+        substractBtn.addActionListener(actionListener);
     }
+    public void addMultiplyListener(ActionListener actionListener){multiplyBtn.addActionListener(actionListener);}
+    public void addDerivateListener(ActionListener actionListener){derivateBtn.addActionListener(actionListener);}
+    public void addIntegrateListener(ActionListener actionListener){integrateBtn.addActionListener(actionListener);}
+
 }

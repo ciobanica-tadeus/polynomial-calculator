@@ -1,6 +1,4 @@
-import javax.swing.text.PlainDocument;
-import java.util.Collections;
-import java.util.Map;
+package PolynomialCalculator.Model;
 
 public class Model {
     private Polynomial firstPolynomial;
