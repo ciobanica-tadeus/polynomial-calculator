@@ -9,11 +9,11 @@
 .settings
 .springBeans
 .sts4-cache
+.doc
+.docx
 
 ### Intellij IDEA ###
 .idea
 *.iws
 *.iml
 *.ipr
-
-git rm --chached .doc
