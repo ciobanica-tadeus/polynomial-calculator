@@ -218,7 +218,7 @@ public class Controller {
                     model.setFirstPolynomial(doPolynomial(firstInput));
                     model.getFirstPolynomial().integratePolynom();
                     String operationResult = doString(model.getFirstPolynomial());
-                    view.setResultTextField(checkIfZero(operationResult) ? "0" : (operationResult + "+C"));
+                    view.setResultTextField(checkIfZero(operationResult) ? "C" : (operationResult + "+C"));
                 }
             } catch (Exception exception) {
                 System.out.println("Exception " + exception);
