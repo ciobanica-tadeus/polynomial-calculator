@@ -10,7 +10,7 @@
 .springBeans
 .sts4-cache
 .doc
-.docx
+*.docx
 
 ### Intellij IDEA ###
 .idea
