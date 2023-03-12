@@ -16,4 +16,4 @@
 *.iml
 *.ipr
 
-git rm --chached .docx
+git rm --chached .doc
