@@ -15,3 +15,5 @@
 *.iws
 *.iml
 *.ipr
+
+git rm --chached .docx
